@@ -28,7 +28,7 @@ jobs:
       run: |
         # If your function app project is not located in your repository's root
         # Please consider using pushd to change your path
-        pushd LocalFunctionProj
+        pushd .
         dotnet build --configuration Release
         dotnet publish -c Release
         popd
