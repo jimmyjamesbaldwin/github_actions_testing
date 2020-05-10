@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace LocalFunctionProj
 {
@@ -19,12 +21,7 @@ namespace LocalFunctionProj
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-            var response = new HttpResponseMessage(HttpStatusCode.OK);
-            var stream = new FileStream(@"d:\home\site\wwwroot\ShoppingList\index.html", FileMode.Open);
-            response.Content = new StreamContent(stream);
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
-            return response;
+            return new ContentResult { Content = "<html><body>Hello <b>world</b></body></html>", ContentType = "text/html" };
         }
     }
 }
