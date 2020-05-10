@@ -18,16 +18,11 @@ namespace LocalFunctionProj
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            return name != null
-                ? (ActionResult)new OkObjectResult($"Hello, {name}")
-                : new BadRequestObjectResult("Please pass a hhhhh on the query string or in the request body");
+            var response = new HttpResponseMessage(HttpStatusCode.OK);
+            var stream = new FileStream(@"d:\home\site\wwwroot\ShoppingList\index.html", FileMode.Open);
+            response.Content = new StreamContent(stream);
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+            return response;
         }
     }
 }
