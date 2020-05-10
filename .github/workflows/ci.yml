@@ -36,3 +36,4 @@ jobs:
       id: fa
       with:
         app-name: jbaldwin-123
+        path: ./output
