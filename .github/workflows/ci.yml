@@ -27,6 +27,7 @@ jobs:
         run: |
           pwd
           ls -la
+          cp -R src ${{ env.OUTPUT_PATH }}/src
 
       - name: Package functions
         uses: actions/upload-artifact@v1
