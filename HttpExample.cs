@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text;
 
 namespace LocalFunctionProj
 {
@@ -22,7 +23,7 @@ namespace LocalFunctionProj
             ILogger log)
         {
             string readContents;
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
+            using (StreamReader streamReader = new StreamReader(@"d:\home\site\wwwroot\HttpExample\index.html", Encoding.UTF8))
             {
                 readContents = streamReader.ReadToEnd();
             }
