@@ -15,4 +15,9 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
+    <Target Name="WorkaroundNetStandard" AfterTargets="ResolvePackageAssets">
+    <ItemGroup>
+      <TransitiveFrameworkReference Remove="NETStandard.Library" />
+    </ItemGroup>
+  </Target>
 </Project>
