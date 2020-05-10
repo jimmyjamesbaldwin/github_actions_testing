@@ -17,13 +17,11 @@ namespace LocalFunctionProj
     public static class HttpExample
     {
         [FunctionName("HttpExample")]
-        public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log)
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
         {
-            var response = new HttpResponseMessage(HttpStatusCode.OK);
-            var stream = new FileStream(@"d:\home\site\wwwroot\LocalFunctionPro\index.html", FileMode.Open);
-            response.Content = new StreamContent(stream);
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
-            return response;
+            return new ContentResult { Content = "<html><body>Hello <b>world</b></body></html>", ContentType = "text/html" };
         }
     }
 }
