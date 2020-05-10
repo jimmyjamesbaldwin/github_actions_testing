@@ -21,17 +21,12 @@ namespace LocalFunctionProj
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            //return new ContentResult { Content = "<html><body>Hello <b>world</b></body></html>", ContentType = "text/html" };
-
-
-
-                var result = new HttpResponseMessage(HttpStatusCode.OK);
-                var stream = new FileStream(@"d:\home\site\wwwroot\HttpExample\index.html", FileMode.Open);
-                result.Content = new StreamContent(stream);
-                result.Content = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(html));
-                response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
-            
-                return result;
+            string readContents;
+            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
+            {
+                readContents = streamReader.ReadToEnd();
+            }
+            return new ContentResult { Content = readContents, ContentType = "text/html" };
 
         }
     }
