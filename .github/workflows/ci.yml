@@ -29,8 +29,7 @@ jobs:
         # If your function app project is not located in your repository's root
         # Please consider using pushd to change your path
         pushd .
-        dotnet build --configuration Release
-        dotnet publish -c Release
+        dotnet build --configuration Release --output ./output
         popd
     - name: 'Run Azure Functions Action!'
       uses: Azure/functions-action@v1
