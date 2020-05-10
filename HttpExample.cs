@@ -8,9 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using System.IO;
 using System.Text;
 
 namespace LocalFunctionProj
