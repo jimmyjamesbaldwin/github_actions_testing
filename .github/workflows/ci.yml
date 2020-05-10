@@ -23,10 +23,8 @@ jobs:
       - name: Publish functions
         run: dotnet publish --configuration Release --output ${{ env.OUTPUT_PATH }}
       
-      - name: Print a greeting
+      - name: Copy static assets to build output
         run: |
-          pwd
-          ls -la
           cp -R src ${{ env.OUTPUT_PATH }}/src
 
       - name: Package functions
@@ -39,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     env:
-      FUNC_APP_NAME: jbaldwin-123
+      FUNC_APP_NAME: jamesbaldwin
     steps:
       - name: Download website
         uses: actions/download-artifact@v1
