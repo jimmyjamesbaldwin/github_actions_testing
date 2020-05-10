@@ -23,7 +23,7 @@ namespace LocalFunctionProj
             ILogger log)
         {
             string readContents;
-            using (StreamReader streamReader = new StreamReader(@"d:\home\site\wwwroot\HttpExample\index.html", Encoding.UTF8))
+            using (StreamReader streamReader = new StreamReader(@"d:\home\site\wwwroot\HttpExample\src\index.html", Encoding.UTF8))
             {
                 readContents = streamReader.ReadToEnd();
             }
