@@ -14,7 +14,6 @@ namespace LocalFunctionProj
 {
     public static class HttpExample
     {
-        [FunctionName("HttpExample")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
