@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     env:
-      FUNC_APP_NAME: jamesbaldwin
+      FUNC_APP_NAME: jamesbaldwinhf65g
     steps:
       - name: Download website
         uses: actions/download-artifact@v1
