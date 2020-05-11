@@ -10,11 +10,11 @@ using Newtonsoft.Json;
 using System.Net;
 using System.Text;
 
-namespace LocalFunctionProj
+namespace Website
 {
-    public static class HttpExample
+    public static class Http
     {
-        [FunctionName("HttpExample")]
+        [FunctionName("Http")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
