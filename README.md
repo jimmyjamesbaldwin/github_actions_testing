@@ -13,7 +13,7 @@ az group deployment create -n jamesbaldwin.co.uk -g jamesbaldwin.co.uk --templat
 
 
 ```
-az ad sp create-for-rbac --name "jamesbaldwin.co.uk" --role contributor --scopes /subscriptions/<id>/resourceGroups/intune/providers/Microsoft.Web/sites/jamesbaldwin.co.uk --sdk-auth
+az ad sp create-for-rbac --name "jamesbaldwin.co.uk" --role contributor --scopes /subscriptions/10233f3f-7dce-4193-934b-53b125b85da4/resourceGroups/jamesbaldwin.co.uk/providers/Microsoft.Web/sites/jamesbaldwinypw5g --sdk-auth
 ```
 
 
