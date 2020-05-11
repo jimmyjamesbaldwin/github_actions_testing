@@ -14,7 +14,7 @@
           "description": "The name of the storage account that the function app will use."
         }
       },
-      "storageAccountType": {
+      "storageAccType": {
         "type": "string",
         "defaultValue": "Standard_LRS",
         "allowedValues": [
