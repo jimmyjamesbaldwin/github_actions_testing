@@ -4,7 +4,7 @@
 
 [www.jamesbaldwin.co.uk](https://www.jamesbaldwin.co.uk)
 
-<img src="https://i2.wp.com/www.jasonbytes.com/wp-content/uploads/2019/12/fucntions.png" width="100"><img src="https://cdn.clipart.email/3707b13e1d52c6435ba7eb6466b5298e_github-actions-github_200-200.png" width="100"><img src="https://dotnetdevlife.files.wordpress.com/2018/04/resource-group.png" width="100">
+<img src="https://i2.wp.com/www.jasonbytes.com/wp-content/uploads/2019/12/fucntions.png" width="100"><img src="https://cdn.clipart.email/a8ea71f31a98e2fd9ef5f8910836d20d_github-actions-github-topics-github_288-288.png" width="100"><img src="https://dotnetdevlife.files.wordpress.com/2018/04/resource-group.png" width="100">
 
 A very minialist personal website built using Azure Functions, infrastructure provisioned with ARM templates, and deployed with GitHub Actions.
 
